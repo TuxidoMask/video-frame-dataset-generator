@@ -2,6 +2,8 @@
 
 # 🎥 Extracción de Frames desde Videos para Dataset (Guía para Principiantes)
 
+![Python](https://img.shields.io/badge/python-3.8+-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+
 Este proyecto te ayuda a convertir videos en imágenes (frames), algo fundamental si estás empezando en **visión por computadora** o desarrollando tu **tesis**.
 
 ---
@@ -45,7 +47,7 @@ project/
 ├── script.py              # 🐍 Script principal
 └── README.md
 ```
-![Vista previa](./antes.jpg)
+![Vista previa](assets/images/before_structure.jpg)
 
 ---
 
@@ -62,7 +64,7 @@ project/
 │       └── val/           # 🧪 Imágenes para validación
 ```
 
-![Vista previa](./después.jpg)
+![Vista previa](assets/images/after_structure.jpg)
 
 ---
 
@@ -149,12 +151,12 @@ Las imágenes aparecerán en:
 ```id="outp"
 dataset/images/train
 ```
-![Vista previa](./ejemplo_1.jpg)
+![Vista previa](.assets/images/example_1.jpg)
 
 ```
 dataset/images/val
 ```
-![Vista previa](./ejemplo_2.jpg)
+![Vista previa](.assets/images/example_2.jpg)
 
 
 ---
@@ -277,6 +279,8 @@ MIT License
 
 # 🎥 Video Frame Extraction for Dataset Generation (Beginner-Friendly Guide)
 
+![Python](https://img.shields.io/badge/python-3.8+-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+
 This project helps you convert videos into images (frames), which is essential if you're starting in **computer vision** or working on your **thesis**.
 
 ---
@@ -322,7 +326,7 @@ project/
 └── README.md
 ```
 
-![Preview](./antes.jpg)
+![Vista previa](assets/images/before_structure.jpg)
 
 ---
 
@@ -339,7 +343,7 @@ project/
 │       └── val/           # 🧪 Validation images
 ```
 
-![Preview](./después.jpg)
+![Vista previa](assets/images/after_structure.jpg)
 
 ---
 
@@ -427,13 +431,13 @@ Images will be generated in:
 dataset/images/train
 ```
 
-![Preview](./ejemplo_1.jpg)
+![Vista previa](.assets/images/example_1.jpg)
 
 ```
 dataset/images/val
 ```
 
-![Preview](./ejemplo_2.jpg)
+![Vista previa](.assets/images/example_2.jpg)
 
 ---
 
