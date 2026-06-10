@@ -1,3 +1,5 @@
+## 🇪🇸 Versión en Español
+
 # 🎥 Extracción de Frames desde Videos para Dataset (Guía para Principiantes)
 
 Este proyecto te ayuda a convertir videos en imágenes (frames), algo fundamental si estás empezando en **visión por computadora** o desarrollando tu **tesis**.
@@ -43,8 +45,6 @@ project/
 ├── script.py              # 🐍 Script principal
 └── README.md
 ```
-
-### Imagen 1
 ![Vista previa](./antes.jpg)
 
 ---
@@ -81,7 +81,7 @@ Necesitas tener instalado:
 ### 1. Clonar el repositorio
 
 ```bash id="cl0n3r"
-git clone https://github.com/tu-usuario/tu-repo.git
+git clone https://github.com/TuxidoMask/video-frame-dataset-generator
 cd tu-repo
 ```
 
@@ -269,5 +269,283 @@ Proyecto desarrollado como parte de una tesis en visión por computadora.
 ---
 
 ## 📄 Licencia
+
+MIT License
+
+
+## 🇺🇸 🇬🇧 English version
+
+# 🎥 Video Frame Extraction for Dataset Generation (Beginner-Friendly Guide)
+
+This project helps you convert videos into images (frames), which is essential if you're starting in **computer vision** or working on your **thesis**.
+
+---
+
+## 🧠 What problem does it solve?
+
+When working with models like YOLO or any computer vision system, you need **a large number of images**.
+
+But usually, you have:
+👉 Videos
+
+And what you actually need:
+👉 Labeled images
+
+This script solves that problem by:
+
+✔ Automatically converting videos into images
+✔ Organizing data for training
+✔ Saving you hours of manual work
+
+---
+
+## 🖼️ What does this script do?
+
+* Reads all videos inside a folder
+* Extracts frames at a fixed interval (e.g., every 5 seconds)
+* Automatically splits the dataset into:
+
+  * 🧠 `train` (training)
+  * 🧪 `val` (validation)
+* Saves images with structured filenames
+
+---
+
+## 📂 Project Structure (BEFORE running)
+
+```
+project/
+│
+├── videos/                # 📥 Place your videos here
+│
+├── script.py              # 🐍 Main script
+└── README.md
+```
+
+![Preview](./antes.jpg)
+
+---
+
+## 📂 Project Structure (AFTER running)
+
+```
+project/
+│
+├── videos/
+│
+├── dataset/
+│   └── images/
+│       ├── train/         # 🧠 Training images
+│       └── val/           # 🧪 Validation images
+```
+
+![Preview](./después.jpg)
+
+---
+
+## ⚙️ Requirements
+
+You need:
+
+* Python 3.8+
+* OpenCV
+* (Optional but recommended) FFmpeg
+
+---
+
+## 📦 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/TuxidoMask/video-frame-dataset-generator
+cd you-repo
+```
+
+---
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 3. Install FFmpeg (recommended)
+
+FFmpeg improves video handling (although OpenCV works on its own).
+
+* Windows: download from https://ffmpeg.org/
+* Linux:
+
+```bash
+sudo apt install ffmpeg
+```
+
+* Verify installation:
+
+```bash
+ffmpeg -version
+```
+
+---
+
+## ▶️ How to use (Step by step)
+
+### 1. Add your videos
+
+Place your files inside:
+
+```
+videos/
+```
+
+Example:
+
+```
+videos/
+├── video1.mp4
+├── video2.avi
+```
+
+---
+
+### 2. Run the script
+
+```bash
+python script.py
+```
+
+---
+
+### 3. Check the output
+
+Images will be generated in:
+
+```
+dataset/images/train
+```
+
+![Preview](./ejemplo_1.jpg)
+
+```
+dataset/images/val
+```
+
+![Preview](./ejemplo_2.jpg)
+
+---
+
+## ⚙️ Basic configuration
+
+You can modify these parameters in the script:
+
+### ⏱️ Extraction interval
+
+```python
+interval_seconds = 5
+```
+
+👉 Defines how often a frame is saved
+
+---
+
+### 📊 Train/Validation split
+
+```python
+if random.random() < 0.8:
+```
+
+👉 80% training / 20% validation
+
+---
+
+## 📊 Example filenames
+
+```
+video1_f0001_t10s.jpg
+```
+
+Meaning:
+
+* `video1` → video name
+* `f0001` → frame number
+* `t10s` → timestamp in seconds
+
+---
+
+## 🧠 How to use this in a thesis?
+
+This project is useful for:
+
+* Event detection in videos
+* Training AI models (YOLO, CNN, etc.)
+* Building custom datasets
+
+Typical workflow:
+
+1. 🎥 Videos
+2. 🖼️ Frames (this script)
+3. 🏷️ Annotation (LabelImg, CVAT, etc.)
+4. 🤖 Model training
+
+---
+
+## ⚠️ Common issues
+
+❌ "Videos not detected"
+✔ Make sure they are inside `/videos`
+
+❌ "Invalid FPS"
+✔ The video may be corrupted
+
+❌ No images generated
+✔ Check write permissions
+
+---
+
+## 🚀 Future improvements
+
+* [ ] GUI (Graphical User Interface)
+* [ ] Automatic annotation export
+* [ ] Direct YOLO integration
+* [ ] `.json` configuration support
+
+---
+
+## 📁 Important repository files
+
+```
+videos/          # (DO NOT upload to GitHub)
+dataset/         # (DO NOT upload to GitHub)
+script.py
+requirements.txt
+README.md
+.gitignore
+```
+
+---
+
+## 🚫 Recommended .gitignore
+
+```
+dataset/
+videos/
+__pycache__/
+*.pyc
+venv/
+.env
+```
+
+---
+
+## 👨‍💻 Author
+
+Project developed as part of a computer vision thesis.
+
+---
+
+## 📄 License
 
 MIT License
