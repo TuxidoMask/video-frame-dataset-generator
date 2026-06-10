@@ -151,12 +151,12 @@ Las imágenes aparecerán en:
 ```id="outp"
 dataset/images/train
 ```
-![Vista previa](.assets/images/example_1.jpg)
+![Vista previa](assets/images/example_1.jpg)
 
 ```
 dataset/images/val
 ```
-![Vista previa](.assets/images/example_2.jpg)
+![Vista previa](assets/images/example_2.jpg)
 
 
 ---
@@ -431,13 +431,13 @@ Images will be generated in:
 dataset/images/train
 ```
 
-![Vista previa](.assets/images/example_1.jpg)
+![Vista previa](assets/images/example_1.jpg)
 
 ```
 dataset/images/val
 ```
 
-![Vista previa](.assets/images/example_2.jpg)
+![Vista previa](assets/images/example_2.jpg)
 
 ---
 
